@@ -34,10 +34,6 @@ class SQLRequests(SQLCursor):
         self.execute(f"""SELECT * FROM skin WHERE guild_id={_id} ORDER BY filename ASC""")
         return (self.cursor.fetchall())
 
-    def lastUploads(self, n: int = 5) -> list:
-        self.execute(f"""SELECT * FROM skin ORDER BY created_at ASC LIMIT {n}""")
-        return (self.cursor.fetchall())
-
     def onlyFilenameByGuildId(self, _id: str) -> list:
         self.execute(f"""SELECT filename FROM skin WHERE guild_id={_id} ORDER BY filename ASC""")
         return (self.cursor.fetchall())

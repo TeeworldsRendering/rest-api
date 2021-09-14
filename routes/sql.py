@@ -16,10 +16,6 @@ def selectByGuildId(guild_id: int = 0):
 def selectOnlyFilenameByGuildId(guild_id: int = 0):
     return (str(sql.onlyFilenameByGuildId(guild_id)).replace("'", "\""))
 
-@app.route("/skin/last/<int:count>", methods = ["GET"])
-def selectLastUploaded(count: int = 5):
-    return (str(sql.lastUploads(count)))
-
 @app.route("/skin/upload", methods = ["POST"])
 def insertSkin():
     sql.insertSkin(request.args.to_dict())
