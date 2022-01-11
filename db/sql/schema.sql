@@ -1,7 +1,3 @@
-CREATE DATABASE IF NOT EXISTS `twskin` CHARACTER SET ascii COLLATE ascii_general_ci;
-
-USE `twskin`;
-
 CREATE TABLE IF NOT EXISTS `skin` (
     `guild_id` VARCHAR(20),
     `user_id` VARCHAR(20),
